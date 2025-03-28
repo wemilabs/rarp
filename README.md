@@ -1,6 +1,6 @@
 # RARP - Rwanda Academic Research Portal
 
-RARP is a modern academic research portal built with Next.js 15.2.4, designed to help researchers, students, and academics find, filter, and access scholarly papers and articles.
+RARP is a modern academic research portal designed to help researchers, students, and academics find, filter, and access scholarly papers and articles.
 
 ## Features
 
@@ -11,7 +11,7 @@ RARP is a modern academic research portal built with Next.js 15.2.4, designed to
 
 ## Technology Stack
 
-- **Frontend**: Next.js 15.2.4, React, TypeScript, Tailwind CSS, Shadcn UI
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS, Shadcn UI
 - **Backend**: Next.js App Router with Server Components
 - **Database**: PostgreSQL (via Prisma ORM)
 

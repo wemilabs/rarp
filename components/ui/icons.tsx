@@ -1,4 +1,3 @@
-// components/ui/icons.tsx
 import {
   ArrowRight,
   Bell,
