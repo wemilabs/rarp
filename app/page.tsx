@@ -1,12 +1,17 @@
 import { SearchBar } from "@/components/search/search-bar";
 import { Icons } from "@/components/ui/icons";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { BookOpen, BookText, Compass, FileText, LucideIcon, Search, TrendingUp } from "lucide-react";
 
 interface FeatureCardProps {
-  icon: LucideIcon;
+  icon: Icons;
   title: string;
   description: string;
 }
@@ -41,11 +46,12 @@ export default function Home() {
       <section className="min-h-[80vh] flex flex-col items-center justify-center space-y-8 px-4 py-16">
         <div className="max-w-4xl w-full text-center space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground">
-            Research Academic{" "}
-            <span className="text-primary">Resource Portal</span>
+            Rwanda Academic{" "}
+            <span className="text-primary">Research Portal</span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Discover, explore, and access academic papers from top journals and databases.
+            Discover, explore, and access academic papers from top journals and
+            databases.
           </p>
           <div className="flex justify-center pt-6 relative">
             <SearchBar />
@@ -53,15 +59,17 @@ export default function Home() {
           <div className="pt-4 flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <span>Popular:</span>
             <div className="flex gap-2">
-              {["Machine Learning", "Climate Change", "Quantum Physics"].map((topic) => (
-                <Link 
-                  key={topic} 
-                  href={`/search?q=${encodeURIComponent(topic)}`}
-                  className="px-3 py-1 bg-muted/50 hover:bg-muted rounded-full text-sm transition-colors"
-                >
-                  {topic}
-                </Link>
-              ))}
+              {["Machine Learning", "Climate Change", "Quantum Physics"].map(
+                (topic) => (
+                  <Link
+                    key={topic}
+                    href={`/search?q=${encodeURIComponent(topic)}`}
+                    className="px-3 py-1 bg-muted/50 hover:bg-muted rounded-full text-sm transition-colors"
+                  >
+                    {topic}
+                  </Link>
+                )
+              )}
             </div>
           </div>
         </div>
@@ -70,35 +78,37 @@ export default function Home() {
       {/* Features section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Use Our Portal</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">
+            Why Use Our Portal
+          </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            <FeatureCard 
-              icon={Search}
+            <FeatureCard
+              icon={Icons.search}
               title="Advanced Search"
               description="Powerful search capabilities with filters for year, author, citation count, and more."
             />
-            <FeatureCard 
-              icon={BookText}
+            <FeatureCard
+              icon={Icons.bookText}
               title="Comprehensive Database"
               description="Access millions of papers from reputable journals and academic databases."
             />
-            <FeatureCard 
-              icon={TrendingUp}
+            <FeatureCard
+              icon={Icons.trendingUp}
               title="Citation Metrics"
               description="View citation counts and impact factors to evaluate research importance."
             />
-            <FeatureCard 
-              icon={FileText}
+            <FeatureCard
+              icon={Icons.fileText}
               title="Full-Text Access"
               description="Direct links to full-text PDFs when available through institutional access."
             />
-            <FeatureCard 
-              icon={Compass}
+            <FeatureCard
+              icon={Icons.compass}
               title="Research Explorer"
               description="Discover related papers and explore research topics with interactive tools."
             />
-            <FeatureCard 
-              icon={BookOpen}
+            <FeatureCard
+              icon={Icons.bookOpen}
               title="Save & Organize"
               description="Create collections and save papers for future reference and organization."
             />
@@ -109,7 +119,9 @@ export default function Home() {
       {/* CTA section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold">Ready to explore academic research?</h2>
+          <h2 className="text-3xl font-bold">
+            Ready to explore academic research?
+          </h2>
           <p className="text-xl text-muted-foreground">
             Start your academic journey with our powerful research tools.
           </p>
