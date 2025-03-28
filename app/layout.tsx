@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { SiteHeader } from "@/components/layout/site-header";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,15 +15,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "RARP | Rwanda Academic Research Portal",
-  description: "The Official Rwanda Academic Research Portal",
-  keywords: ["RARP", "Rwanda Academic Research Portal", "Academic Research"],
+  title: "RARP | Research Academic Resource Portal",
+  description:
+    "Discover and access academic papers from top journals and databases",
+  keywords: ["RARP", "Research Academic Resource Portal", "Academic Research"],
   openGraph: {
-    title: "RARP | Rwanda Academic Research Portal",
-    description: "The Official Rwanda Academic Research Portal",
+    title: "RARP | Research Academic Resource Portal",
+    description:
+      "Discover and access academic papers from top journals and databases",
     type: "website",
     url: "https://rarp.vercel.app",
-    siteName: "RARP | Rwanda Academic Research Portal",
+    siteName: "RARP | Research Academic Resource Portal",
     images: [
       {
         url: "https://ubrw5iu3hw.ufs.sh/f/TFsxjrtdWsEIyHzxoRXdEKaUNDPVSW9zJCkG1t7F60R2joT5",
@@ -32,8 +35,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "RARP | Rwanda Academic Research Portal",
-    description: "The Official Rwanda Academic Research Portal",
+    title: "RARP | Research Academic Resource Portal",
+    description:
+      "Discover and access academic papers from top journals and databases",
     card: "summary_large_image",
     site: "rarp.vercel.app",
     images: [
@@ -54,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -62,7 +66,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
