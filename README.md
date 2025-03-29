@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Arport - Rwanda Academic Research Portal
+
+**Arport** is a modern academic research portal designed to help researchers, students, and academics find, filter, and access scholarly papers and articles.
+
+## Features
+
+- **Search Functionality**: Search for papers, authors, topics, and more
+- **Advanced Filtering**: Filter research papers by year, category, citation count, and other criteria
+- **Responsive UI**: Modern, clean interface that works on desktop and mobile devices
+- **Paper Details**: View comprehensive information about research papers, including abstracts, author information, and citation data
+
+## Technology Stack
+
+- **Frontend**: Next.js, React, TypeScript, Tailwind CSS, Shadcn UI
+- **Backend**: Next.js App Router with Server Components
+- **Database**: PostgreSQL (via Prisma ORM)
 
 ## Getting Started
 
-First, run the development server:
+First, install the required dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Next.js App Router pages and layouts
+- `components/`: Reusable React components
+- `lib/`: Utility functions and data
+- `prisma/`: Database schema and migrations
+- `public/`: Static assets
 
-## Learn More
+## Building for Production
 
-To learn more about Next.js, take a look at the following resources:
+To build the application for production:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Then run the production server:
 
-## Deploy on Vercel
+```bash
+pnpm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Contributing
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.

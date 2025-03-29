@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
+// import { unstable_ViewTransition as ViewTransition } from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Header } from "@/components/layout/site-header";
+import { QuickNav } from "@/components/layout/quick-nav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,16 +16,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "RARP | Rwanda Academic Research Portal",
-  description: "The Official Rwanda Academic Research Portal",
-  keywords: ["RARP", "Rwanda Academic Research Portal", "Academic Research"],
+  title: "Arport | Academic Research Portal",
+  description:
+    "Discover and access academic papers from universities and research institutions",
+  keywords: ["arport", "Academic Research Portal", "Academic Research"],
   openGraph: {
-    title: "RARP | Rwanda Academic Research Portal",
-    description: "The Official Rwanda Academic Research Portal",
+    title: "Arport | Academic Research Portal",
+    description:
+      "Discover and access academic papers from universities and research institutions",
     type: "website",
     url: "https://rarp.vercel.app",
-    siteName: "RARP | Rwanda Academic Research Portal",
+    siteName: "arport | Academic Research Portal",
     images: [
       {
         url: "https://ubrw5iu3hw.ufs.sh/f/TFsxjrtdWsEIyHzxoRXdEKaUNDPVSW9zJCkG1t7F60R2joT5",
@@ -32,8 +42,9 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "RARP | Rwanda Academic Research Portal",
-    description: "The Official Rwanda Academic Research Portal",
+    title: "Arport | Academic Research Portal",
+    description:
+      "Discover and access academic papers from universities and research institutions",
     card: "summary_large_image",
     site: "rarp.vercel.app",
     images: [
@@ -48,13 +59,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.className} ${geistMono.className} ${inter.className} antialiased`}
       >
         <ThemeProvider
           attribute="class"
@@ -62,7 +75,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <div className="relative flex min-h-screen flex-col">
+            <QuickNav />
+            <Header />
+            <main className="flex-1">
+              {/* <ViewTransition> */}
+              {children}
+              {modal}
+              {/* </ViewTransition> */}
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
