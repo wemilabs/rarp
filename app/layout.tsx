@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Inter } from "next/font/google";
-import { unstable_ViewTransition as ViewTransition } from "react";
+// import { unstable_ViewTransition as ViewTransition } from "react";
 import "./globals.css";
 import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Header } from "@/components/layout/site-header";
@@ -77,10 +77,10 @@ export default function RootLayout({
           <div className="relative flex min-h-screen flex-col">
             <Header />
             <main className="flex-1">
-              <ViewTransition>
-                {children}
-                {modal}
-              </ViewTransition>
+              {/* <ViewTransition> */}
+              {children}
+              {modal}
+              {/* </ViewTransition> */}
             </main>
           </div>
         </ThemeProvider>
