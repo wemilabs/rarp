@@ -23,12 +23,12 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Arport | Academic Research Portal",
   description:
-    "Discover and access academic papers from universities and research institutions in Rwanda",
+    "Discover and access academic papers from universities and research institutions",
   keywords: ["arport", "Academic Research Portal", "Academic Research"],
   openGraph: {
     title: "Arport | Academic Research Portal",
     description:
-      "Discover and access academic papers from universities and research institutions in Rwanda",
+      "Discover and access academic papers from universities and research institutions",
     type: "website",
     url: "https://rarp.vercel.app",
     siteName: "arport | Academic Research Portal",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   twitter: {
     title: "Arport | Academic Research Portal",
     description:
-      "Discover and access academic papers from universities and research institutions in Rwanda",
+      "Discover and access academic papers from universities and research institutions",
     card: "summary_large_image",
     site: "rarp.vercel.app",
     images: [
