@@ -21,17 +21,17 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "RARP | Rwanda Academic Research Portal",
+  title: "Arport | Academic Research Portal",
   description:
     "Discover and access academic papers from universities and research institutions in Rwanda",
-  keywords: ["RARP", "Rwanda Academic Research Portal", "Academic Research"],
+  keywords: ["arport", "Academic Research Portal", "Academic Research"],
   openGraph: {
-    title: "RARP | Rwanda Academic Research Portal",
+    title: "Arport | Academic Research Portal",
     description:
       "Discover and access academic papers from universities and research institutions in Rwanda",
     type: "website",
     url: "https://rarp.vercel.app",
-    siteName: "RARP | Rwanda Academic Research Portal",
+    siteName: "arport | Academic Research Portal",
     images: [
       {
         url: "https://ubrw5iu3hw.ufs.sh/f/TFsxjrtdWsEIyHzxoRXdEKaUNDPVSW9zJCkG1t7F60R2joT5",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     ],
   },
   twitter: {
-    title: "RARP | Rwanda Academic Research Portal",
+    title: "Arport | Academic Research Portal",
     description:
       "Discover and access academic papers from universities and research institutions in Rwanda",
     card: "summary_large_image",

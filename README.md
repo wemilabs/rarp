@@ -1,6 +1,6 @@
-# RARP - Rwanda Academic Research Portal
+# Arport - Rwanda Academic Research Portal
 
-RARP is a modern academic research portal designed to help researchers, students, and academics find, filter, and access scholarly papers and articles.
+**Arport** is a modern academic research portal designed to help researchers, students, and academics find, filter, and access scholarly papers and articles.
 
 ## Features
 

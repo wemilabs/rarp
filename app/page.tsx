@@ -46,8 +46,17 @@ export default function Home() {
       <section className="min-h-[80vh] flex flex-col items-center justify-center space-y-8 px-4 py-16">
         <div className="max-w-4xl w-full text-center space-y-6">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-foreground">
-            Rwanda Academic{" "}
-            <span className="text-primary">Research Portal</span>
+            The Comprehensive Unified Space for{" "}
+            <span
+              className="text-primary"
+              // className="text-4xl font-extrabold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1] bg-gradient-to-r from-primary/10 via-primary to-primary/65 bg-clip-text text-transparent mt-2"
+              // make this part dynamic [Academic Researchers, Students, Supervisors]
+              // like typing or appearing/switching from the bottom
+              // use react-typing or react-type
+              // give it a different color also
+            >
+              Academic Researchers
+            </span>
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Discover, explore, and access academic papers from top journals and
@@ -79,7 +88,7 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">
-            Why Use Our Portal
+            Why Use Arport?
           </h2>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             <FeatureCard
@@ -119,9 +128,7 @@ export default function Home() {
       {/* CTA section */}
       <section className="py-20 px-4 bg-muted/30">
         <div className="max-w-4xl mx-auto text-center space-y-6">
-          <h2 className="text-3xl font-bold">
-            Ready to explore academic research?
-          </h2>
+          <h2 className="text-3xl font-bold">Ready to dive in?</h2>
           <p className="text-xl text-muted-foreground">
             Start your academic journey with our powerful research tools.
           </p>
